@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/contact.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+
+    <title>Global Nexus Trading</title>
+</head>
+
+<body>
+    <nav>
+        <div class="hero_image">
+            <img src='./assets/bg-email.png' />
+        </div>
+        <div class="navbar">
+            <div class="logo"><a href="./index.html">GNT</a></div>
+            <div class="links">
+                <a href="./index.html">Home</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+        </div>
+        <!-- <div class="main_title">
+            <h1>Contact us</h1>
+        </div> -->
+    </nav>
+
+    <main class="contact">
+        <section>
+            <div class="sec-one">
+                <div class="left">
+                    <h1>Contact Information</h1>
+                    <div class="cc">
+                        <img src="./assets/address.png" />
+                        <span>Anand nagar, Mohan krupa socity, Ahmedabad - 380015</span>
+                    </div>
+                    <div class='cc'>
+                        <img src="./assets/phone.png" />
+                        <div>
+                            <div>+91 8320678826</div>
+                            <div>+91 8657990848</div>
+                        </div>
+
+                    </div>
+                    <div class='cc'>
+                        <img src="./assets/email.png" />
+                        <span>global.nexus.tradings@gmail.com</span>
+                    </div>
+                </div>
+                <div class='right'>
+                    <h1>Get in touch</h1>
+                    <form onsubmit="sendMail(event)">
+                        <input id="name" type="text" placeholder="Name" required />
+                        <input id="email" type="email" placeholder="Email" required />
+                        <textarea id="message" placeholder="Your message..." required></textarea>
+                        <input class="submit-btn" type="submit" value="Send" />
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <span>Copyright © 2023 GLobal Nexus Tradings Limited. All Rights Reserved.</span>
+    </footer>
+    <!-- Footer Ends -->
+</body>
+
+<script>
+    function sendMail(event) {
+        event.preventDefault();
+        var from = document.getElementById('email').value;
+        var to = 'global.nexus.tradings@gmail.com';
+        var subject = "Query from " + document.getElementById('name').value;
+        var message = document.getElementById('message').value;
+
+        var mailtolink = 'mailto:' + to + '?from=' + encodeURIComponent(from) + '&subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
+        window.location.href = mailtolink;
+    }
+</script>
+
+</html>

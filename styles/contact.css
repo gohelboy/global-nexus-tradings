@@ -1,0 +1,139 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%
+}
+
+.contact section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+}
+
+.contact section .sec-one {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    width: 80%;
+    padding: 2rem 0px;
+}
+
+.contact section .sec-one .left {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 2rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 24px;
+}
+
+.contact section .sec-one .left h1 {
+    width: fit-content;
+    color: grey;
+    font-size: 2.5rem;
+    border-bottom: 3px solid grey;
+}
+
+.contact section .sec-one .left .cc {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    text-wrap: balance;
+}
+
+.contact section .sec-one .left .cc img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    transition: all 300ms ease;
+}
+
+.contact section .sec-one .left .cc img:hover {
+    transform: scale(1.1);
+}
+
+.contact section .sec-one .right {
+    flex: 2;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 24px;
+}
+
+.contact section .sec-one .right h1 {
+    width: fit-content;
+    font-size: 2.5rem;
+    color: grey;
+    border-bottom: 3px solid grey;
+}
+
+.contact section .sec-one .right form {
+    display: grid;
+
+    gap: 1rem;
+}
+
+.contact section .sec-one .right form input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 14px;
+    border: none;
+    font-size: 1rem;
+
+}
+
+.contact section .sec-one .right form textarea {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 14px;
+    border: none;
+    font-size: 1rem;
+    resize: none;
+}
+
+.contact section .sec-one .right form .submit-btn {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 14px;
+    border: none;
+    font-size: 1rem;
+    resize: none;
+    background-color: grey;
+    color: white;
+    font-size: 1.5rem;
+    transition: all 100ms ease;
+}
+
+.contact section .sec-one .right form .submit-btn:active {
+    background-color: rgb(65, 65, 65);
+}
+
+
+@media (max-width: 425px) {
+
+    nav {
+        height: 25vh !important;
+    }
+
+    .contact section .sec-one {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+        width: 90%;
+    }
+
+    .contact section .sec-one .left {
+        padding: 1rem;
+    }
+}
